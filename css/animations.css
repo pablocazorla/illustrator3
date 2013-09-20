@@ -1,0 +1,33 @@
+@charset "UTF-8";
+header.main{
+	-webkit-transition: top .3s ease;
+	-moz-transition: top .3s ease;
+	transition: top .3s ease;
+}
+.cazu-grid{
+	position:relative;
+	opacity:1;
+	-webkit-transition: height .6s ease;
+	-moz-transition: height .6s ease;
+	transition: height .6s ease;
+}
+.gallery{
+	-webkit-transition: opacity 1s ease;
+	-moz-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+}
+.gallery figure{
+	-webkit-transition: top .3s ease, left .3s ease;
+	-moz-transition: top .3s ease, left .3s ease;
+	transition: top .3s ease, left .3s ease;
+}
+.gallery figure .explain-work .hover{
+	-webkit-transition: opacity .3s ease;
+	-moz-transition: opacity .3s ease;
+	transition: opacity .3s ease;
+}
+#side-act{
+	-webkit-transition: right .3s ease;
+	-moz-transition: right .3s ease;
+	transition: right .3s ease;
+}
