@@ -1,7 +1,8 @@
 <!doctype HTML>
-<!--[if IE 7]>    <html class="ie7" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if IE 7]>    <html class="ie7 ie-lt-8 ie-lt-9 ie-lt-10" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 ie-lt-9 ie-lt-10" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9 ie-lt-10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
 <head>	
 	<title><?php
 	global $page, $paged;
@@ -24,16 +25,9 @@
 	<meta name="copyright" content="Designed by Pablo Cazorla under licence Creative Commons - 2013." />
 	
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-	
-	<!--temp-->
 	<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.min.css">	
-	
 	<link href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet" type="text/css" />
 	
-	<!--temp-->	
-	<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/mediaqueries.css">
-	<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/animations.css">
-		
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	
 	<!--[if lt IE 9]>
@@ -46,16 +40,18 @@
 <body>
 	<script>
 		var server = '<?php echo $_SERVER[HTTP_HOST]; ?>',
-			templateURL = '<?php bloginfo('template_url'); ?>';		
+			templateURL = '<?php bloginfo('template_url'); ?>',
+			portfolioGrid = false;		
 	</script>
+&nbsp;
 	<header class="box main">
 		<div class="wrap clearfix">
-			<a href="<?php bloginfo( 'url' ); ?>" class="logo">Pablo Cazorla</a>
-			<div id="header-banner">
-				<div class="sl sl1"></div>
-				<div class="sl sl2"></div>
-				<div class="sl sl3"></div>
-			</div>		
+			<a href="<?php bloginfo( 'url' ); ?>" class="logo">
+				<img src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="Pablo Cazorla" title="Pablo Cazorla"/>
+			</a>
+			<a id="menu-launcher" href="">
+				<span></span><span></span><span></span>
+			</a>		
 			<div id="side-act">
 				<div id="side-act-content">
 					<menu class="main">
@@ -63,8 +59,5 @@
 					</menu>
 				</div>				
 			</div>			
-		</div>
-		<a id="menu-launcher" href="">
-			<span></span><span></span><span></span>
-		</a>
+		</div>		
 	</header>

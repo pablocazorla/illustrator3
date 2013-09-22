@@ -3,7 +3,7 @@
 * The Sidebar containing the primary and secondary widget areas.
 */
 ?>
-<section>
+<section id="sidebar-content">
 <div id="primary" class="widget-area" role="complementary">
 <ul class="xoxo">
 
@@ -78,5 +78,5 @@ if ( ! dynamic_sidebar( 'secondary-widget-area' ) ) : ?>
 </div><!-- #secondary .widget-area -->
 </section>
 <div class="advice">
-	Advices
+	<!--Advices-->
 </div>

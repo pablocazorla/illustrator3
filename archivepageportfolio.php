@@ -1,10 +1,11 @@
 <?php get_header(); ?>
+<script>portfolioGrid = true;</script>
 <?php $cat_name = single_cat_title('',false);?>
 <header class="page-header wrap portfolio">
 	<h1><?php echo $cat_name; ?></h1>
 </header>
 
-<article id="portfolio-list" class="wrap portfolio">
+<article id="portfolio-list" class="wrap portfolio" currentmenu="portfolio">
 	<section class="gallery clearfix" id="gallery">
 		<?php if (have_posts()) :?>
 		<?php while (have_posts()) : the_post(); ?>	    
@@ -42,13 +43,13 @@
 
 <div class="item-back item-show" style="display:none">
 	<div id="item-dimmer" class="close-work"></div>
-	<!--div class="item-header">
+	<div class="item-header">
 		<div class="item-header-content wrap">
-			<span class="close-work x box">X</span>
+			<span class="close-work x box"></span>
 		</div>
-	</div-->
-	<div class="item wrap box">	
-		<div id="item-content">
+	</div>
+	<div class="item wrap">	
+		<div id="item-content" class="content-portfolio box">
 			<div class="loading">Loading...</div>
 		</div>
 	</div>

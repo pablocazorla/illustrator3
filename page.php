@@ -1,11 +1,5 @@
-<?php
-/*
-Template Name: About me
-*/
-?>
-
 <?php get_header(); ?>
-<article id="page" class="page wrap clearfix" currentmenu="about me">
+<article id="page" class="page wrap clearfix">
 	
 		
 	<section class="content">				

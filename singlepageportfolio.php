@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<article id="blog-post" class="blog wrap clearfix">
+<article id="blog-post" class="blog wrap clearfix" currentmenu="portfolio">
 	
 		
 	<section class="content-portfolio">				
@@ -7,7 +7,6 @@
 		<section class="box post" id="post-<?php the_ID();?>">
 			<header class="post-header clearfix">
 				<h1><?php the_title(); ?></h1>
-				<?php if( $post->post_excerpt ){ the_excerpt(); } ?>
 				<div class="category">
 					Category: <?php the_category(', '); ?>					
 				</div>
@@ -26,7 +25,7 @@
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4d9270a3495656e9"></script>
 <!-- AddThis Button END -->
 			</header>
-			<p><?php if(has_post_thumbnail()): the_post_thumbnail('large'); endif; ?>	</p>				
+			<p class="thumb-image"><?php if(has_post_thumbnail()): the_post_thumbnail('large'); endif; ?>	</p>				
 			<?php the_content(); ?>
 			<?php comments_template(); ?>
 		</section>

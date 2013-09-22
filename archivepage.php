@@ -14,12 +14,13 @@
 		endif; ?>
 	</h1>
 </header>
-<article id="blog-list" class="blog wrap">	
+<article id="blog-list" class="blog wrap" currentmenu="blog">	
 	<section class="content clearfix">		
 		<?php if (have_posts()) :?>
 		<?php while (have_posts()) : the_post(); ?>
 		<div class="post box" id="post-<?php the_ID();?>">
 			<a href="<?php the_permalink(); ?>" class="link-image">
+				<span class="hover"></span>
 			<?php if(has_post_thumbnail()){
 				the_post_thumbnail('thumbnail');
 			}else{ ?>
@@ -40,7 +41,7 @@
 		</div>
 		<?php endwhile; ?>
 		<?php else :?>
-		<h2><?php _e('Sorry, works not found','pcazorla'); ?>!</h2>
+		<h2>Sorry, posts not found!</h2>
 		<?php endif; ?>
 		
 		<?php if (show_posts_nav()) : ?>
