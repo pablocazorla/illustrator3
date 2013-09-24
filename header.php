@@ -30,6 +30,8 @@
 	
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	
+	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" />
+	
 	<!--[if lt IE 9]>
 	<script src="<?php bloginfo('template_url'); ?>/js/html5-3.4-respond-1.1.0.min.js"></script>
 	<![endif]-->

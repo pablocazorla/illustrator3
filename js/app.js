@@ -26,7 +26,7 @@ var cazu = {
 				this.portfolioGrid().portfolioItemAjax();
 				break;
 			case 'page':
-				this.preHighlight();
+				this.preHighlight().getBubble();
 				break;
 			default:
 				//
@@ -249,6 +249,11 @@ var cazu = {
 			$.getScript('//google-code-prettify.googlecode.com/svn/loader/run_prettify.js');
 		}
 		return this;	
+	},
+	getBubble : function(){
+
+		$.getScript(templateURL+'/js/jquery.bubble.js',function(){		console.log('traigo');$('.bubble').Bubble();});
+		return this;
 	}
 }
 $('document').ready(function(){cazu.init()});

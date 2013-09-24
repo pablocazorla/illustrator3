@@ -5,27 +5,25 @@ Template Name: About me
 ?>
 
 <?php get_header(); ?>
-<article id="page" class="page wrap clearfix" currentmenu="about me">
-	
-		
+<article id="page" class="page wrap clearfix about-me" currentmenu="about me">		
 	<section class="content">				
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<section class="post box" id="post-<?php the_ID();?>">
+		<section class="post box clearfix" id="post-<?php the_ID();?>">
 			<header class="post-header clearfix">
-				<!-- AddThis Button BEGIN -->
-				<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-					<a class="addthis_button_facebook"></a>
-					<a class="addthis_button_twitter"></a>
-					<a class="addthis_button_pinterest_share"></a>
-					<a class="addthis_button_google_plusone_share"></a>
-					<a class="addthis_button_compact"></a>
-					<a class="addthis_bubble_style"></a>
-				</div>
-				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4d9270a3495656e9"></script>
-				<!-- AddThis Button END -->
 				<h1><?php the_title(); ?></h1>
-			</header>				
-			<?php the_content(); ?>
+			</header>
+			<figure class="about-me-image">
+				<img src="<?php bloginfo('template_url'); ?>/img/aboutme.jpg">
+			</figure>
+			<div class="about-me-summary">
+				<?php the_content(); ?>
+				<div class="contact-links clearfix">
+					<a href="http://bit.ly/16CQyDp" class="googleplus-link bubble" target="_blank" rel="Follow me on Google+">Google Plus</a>
+					<a href="http://bit.ly/18lKUJx" class="twitter-link bubble" target="_blank" rel="Follow me on Twitter">Twitter</a>
+					<a href="http://bit.ly/17Y537E" class="deviantart-link bubble" target="_blank" rel="Find me on Deviant Art">Deviant Art</a>
+					<a href="mailto:contact@pcazorla.com" class="email-link bubble" target="_blank" rel="Send me an e-mail to contact@pcazorla.com">contact@pcazorla.com</a>
+				</div>			
+			</div>			
 		</section>
 		<?php endwhile; endif; ?>				
 	</section>

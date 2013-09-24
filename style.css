@@ -476,6 +476,54 @@ fieldset.error input,fieldset.error textarea{border-color:#A00;}
 /* PAGE **************************************************************************/
 .page h1{margin-right:200px}
 
+/* ABOUT ME **************************************************************************/
+article.about-me {margin-bottom: 80px}
+.page.about-me h1 {
+    margin-right: 0;
+}
+.about-me .post {padding-bottom: 90px;font-size: 16px}
+.about-me .post .post-header {margin-bottom: 50px}
+.about-me-image{float:left;width:54%}
+.about-me-image img{width:100%;height:auto;max-width:644px;display:block}
+.about-me-summary{float:left;width:39%;padding:0 2% 0 5%}
+.about-me .contact-links{padding:15px 0}
+.about-me .contact-links a{
+	float:left;
+	width:45px;height:45px;
+	display:block;
+	background: url('img/about-social.png') no-repeat;
+	text-indent:-9999px;
+	margin-right:7px;
+}
+.about-me .contact-links a.googleplus-link{background-position:0 0}
+.about-me .contact-links a.googleplus-link:hover{background-position:0 -45px}
+.about-me .contact-links a.twitter-link{background-position:-45px 0}
+.about-me .contact-links a.twitter-link:hover{background-position:-45px -45px}
+.about-me .contact-links a.deviantart-link{background-position:-90px 0}
+.about-me .contact-links a.deviantart-link:hover{background-position:-90px -45px}
+.about-me .contact-links a.email-link{background-position:-135px 0}
+.about-me .contact-links a.email-link:hover{background-position:-135px -45px}
+.bubble-banner{
+	position:absolute;left:50%;bottom:0;z-index:900;
+	display:none;opacity:0;
+	width:200px;padding:10px;background:#333;
+	border-radius:3px;
+	box-shadow:0 1px 2px rgba(0,0,0,.5);
+	margin: 0 0 10px -110px;
+	text-align:center;
+	color:#FFF;
+	cursor:default;
+	text-indent:0;
+}
+.bubble-banner span{
+	position:absolute;left:50%;bottom:-10px;
+	margin: 0 0 0 -10px;
+	display: block;width:0;height:0;
+	border-width:10px 10px 0;
+	border-style: solid;
+	border-color: #333 transparent transparent;
+}
+
 /* MEDIA QUERIES **************************************************************************/
 @media only screen{
 	body{overflow-x:hidden;}
@@ -513,7 +561,9 @@ fieldset.error input,fieldset.error textarea{border-color:#A00;}
 	menu.main {float: none;line-height: 45px}
 	menu.main li {float: none;padding: 0}
 	menu.main a {padding:0 20px}
-	#menu-launcher{display: block}	
+	#menu-launcher{display: block}
+	
+	.about-me .post {padding-bottom: 90px;font-size: 14px}
 }
 
 @media only screen and (max-width:680px){
@@ -537,6 +587,8 @@ fieldset.error input,fieldset.error textarea{border-color:#A00;}
 #home .presentation h1 a {line-height: 68px}
 #home .presentation p {margin: 0 20px 15px}
 	
+	.about-me-image {width: 39%}
+	.about-me-summary {width: 54%}
 }
 @media only screen and (max-width:350px){
 	.wrap.portfolio{max-width:280px;}
@@ -554,4 +606,8 @@ fieldset.error input,fieldset.error textarea{border-color:#A00;}
 	.post .post-header .category,
 	.post .post-header .addthis_toolbox {float:none}
 	.errorMessage {margin-left: 102px}
+	
+	.about-me .post .post-header{margin-bottom: 20px}
+	.about-me-image {width: 80%;padding:0 10% 20px;float:none;}
+	.about-me-summary {width: 100%;float:none;padding:0;}
 }
