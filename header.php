@@ -24,9 +24,8 @@
 	<meta name="contact" content="contact@pcazorla.com" />
 	<meta name="copyright" content="Designed by Pablo Cazorla under licence Creative Commons - 2013." />
 	
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-	<link type="text/css" rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.min.css">	
-	<link href="<?php bloginfo('template_url'); ?>/style.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>	
+	<link href="<?php bloginfo('template_url'); ?>/style.min.php" rel="stylesheet" type="text/css" />
 	
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	
@@ -38,8 +37,11 @@
 	
 	<?php wp_head(); ?>	
 </head>
-
 <body>
+	<noscript>
+		<link href="<?php bloginfo('template_url'); ?>/css/noscript.css" rel="stylesheet" type="text/css" />
+		<div class="noscript">Please, activate Javascript in your browser to enjoy this site</div>
+	</noscript>
 	<script>
 		var server = '<?php echo $_SERVER[HTTP_HOST]; ?>',
 			templateURL = '<?php bloginfo('template_url'); ?>',

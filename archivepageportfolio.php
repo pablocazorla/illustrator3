@@ -1,8 +1,16 @@
 <?php get_header(); ?>
 <script>portfolioGrid = true;</script>
 <?php $cat_name = single_cat_title('',false);?>
-<header class="page-header wrap portfolio">
+<header class="page-header wrap portfolio clearfix">
 	<h1><?php echo $cat_name; ?></h1>
+	<?php 
+	if($cat_name == "Portfolio"){
+	wp_nav_menu(array('menu' => 'Tertiary' ));
+	}else{
+		$category_id = get_cat_ID( 'Portfolio');
+		$category_link = get_category_link( $category_id );
+		echo "<div class=\"menu\"><a href=\"".$category_link."\">back to Portfolio</a></div>";
+	}?>
 </header>
 
 <article id="portfolio-list" class="wrap portfolio" currentmenu="portfolio">

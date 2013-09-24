@@ -7,7 +7,8 @@ add_theme_support( 'nav-menus' );
 // This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => 'Primary Navigation',
-		'secondary' => 'Secondary Navigation'
+		'secondary' => 'Secondary Navigation',
+		'tertiary' => 'Tertiary Navigation'
 ) );
 /***********************************************
 * HABILITAR POST THUMBNAILS
