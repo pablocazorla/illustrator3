@@ -14,6 +14,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul,menu{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 /* Clearfix */
 .clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}
+.clear{clear:both}
 
 /* BASICS **********************************************************************************************************/
 body{	
@@ -88,6 +89,59 @@ article{margin-bottom:30px;min-height: 500px}
 #searchform #searchsubmit,
 .comment-body:before,
 .item-header-content .close-work.x{background-image:url('img/sprite.png');background-repeat: no-repeat;}
+
+/* Buttons */
+.button{
+	display:inline-block;
+	line-height: 34px;
+	background:#06A;
+	color:#FFF;
+	padding:0 10px;margin:0 7px 20px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	cursor:pointer;
+	font-size:15px;
+	box-shadow:0 10px 20px rgba(255,255,255,.25) inset;
+	-moz-box-shadow:0 10px 20px rgba(255,255,255,.25) inset;
+	-webkit-box-shadow:0 10px 20px rgba(255,255,255,.25) inset;
+}
+.button:hover{text-decoration:none;opacity: .9}
+.button:active{position:relative;top:1px}
+
+.button.small{font-size:11px;line-height: 22px;}
+.button.big{font-size:25px;line-height: 53px;padding:0 15px;}
+.button.bigger{font-size:32px;line-height: 68px;padding:0 22px;}
+.button.grey{background:#888;}
+.button.dark,.button.black{background:#222;}
+.button.green{background:#492;color:#FFF;}
+.button.blue{color:#FFF;}
+.button.red{background:#C20;color:#FFF;}
+.button.orange{background:#E70;color:#FFF;}
+.button.yellow{background:#DB0;}
+.button.light,.button.white{background:#FFF;color:#666;border:solid 1px #CCC;
+	box-shadow:0 8px 20px rgba(0,0,0,.1) inset;
+	-moz-box-shadow:0 8px 20px rgba(0,0,0,.1) inset;
+	-webkit-box-shadow:0 8px 20px rgba(0,0,0,.1) inset;
+}
+.button.disable,.button.disable:hover,.button.disable:active{background:#DDD;color:#999;cursor:default;top:0;opacity:1;}
+
+/* Colors */
+.red, .error{color:#D00}
+.orange{color:#D70}
+.green{color:#280}
+.blue{color:#04f}
+
+/* align */
+.align-left,.alignleft{text-align:left}
+.align-center,.aligncenter{text-align:center}
+.align-right,.alignright{text-align:right}
+.float-left,.floatleft{float:left}
+.float-none,.floatnone{float:none}
+.float-right,.floatright{float:right}
+
+/* Note */
+.note{padding:20px;border:dashed 1px #AAA;background:#FFD}
 
 /* HEADER **************************************************************************/
 header.main{

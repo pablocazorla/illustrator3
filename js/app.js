@@ -9,7 +9,7 @@ var cazu = {
 		if(!window.pageID){window.pageID = this.getPage();}		
 		
 		//Common
-		this.currentMenu().headerMov();
+		this.currentMenu().headerMov().disableButtons();
 		
 		//Per page
 		switch(window.pageID){
@@ -117,6 +117,10 @@ var cazu = {
 	wpCaptionOnFull : function(){
 		var $img = $('img.size-full');
 		$img.parent('.wp-caption').css('max-width',$img.width()+'px');
+		return this;
+	},
+	disableButtons : function(){
+		$('.button.disable').attr('title','').click(function(event){var ev = event || window.event;ev.preventDefault();return false;});
 		return this;
 	},
 	portfolioGrid : function(){		

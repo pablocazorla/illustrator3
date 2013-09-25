@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <article id="blog-post" class="blog wrap clearfix" currentmenu="blog">
 	
-		
+	
 	<section class="content">				
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<section class="post box" id="post-<?php the_ID();?>">
