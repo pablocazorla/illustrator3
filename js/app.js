@@ -20,7 +20,7 @@ var cazu = {
 				this.searchForm();
 				break;
 			case 'blog-post':
-				this.searchForm().wpCaptionOnFull().preHighlight().validateForm();
+				this.searchForm().wpCaptionOnFull().preHighlight().wipSlide().validateForm();
 				break;
 			case 'portfolio-list':
 				this.portfolioGrid().portfolioItemAjax();
@@ -246,7 +246,7 @@ var cazu = {
 		return this;
 	},
 	preHighlight : function(){
-		var $pre = $('pre').addClass('prettyprint').each(function(){
+		var $pre = $('pre').not('.no-print').addClass('prettyprint').each(function(){
 			$(this).text($(this).html());
 		});
 		if($pre.length > 0){
@@ -254,9 +254,14 @@ var cazu = {
 		}
 		return this;	
 	},
+	wipSlide : function(){
+		if($('.wipSlider').length > 0){
+			$.getScript(templateURL+'/js/jquery.wipSlider.min.js',function(){$('.wipSlider').wipSlider();});
+		}
+		return this;	
+	},
 	getBubble : function(){
-
-		$.getScript(templateURL+'/js/jquery.bubble.js',function(){		console.log('traigo');$('.bubble').Bubble();});
+		$.getScript(templateURL+'/js/jquery.bubble.js',function(){$('.bubble').Bubble();});
 		return this;
 	}
 }

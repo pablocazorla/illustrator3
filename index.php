@@ -33,6 +33,7 @@
 			?>
 		</section>
 	</div>
+
 	<div class="wrap blog" id="blog-list">
 		<hr/>
 		<?php $category_idb = get_cat_ID( 'Blog');
@@ -67,7 +68,8 @@
 			?>
 		</section>
 	</div>
-</article>
+
+	</article>
 <div class="item-back item-show" style="display:none">
 	<div id="item-dimmer" class="close-work"></div>
 	<div class="item-header">

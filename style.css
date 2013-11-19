@@ -1,12 +1,11 @@
 @charset "UTF-8";
 /*
-Theme Name: pcazorla
+Theme Name: Illustrator3
 Theme URL: http://www.pcazorla.com
 Description: Theme for pcazorla.com
 Author: Pablo Cazorla
-Version: 1.0
-Licence: Creative Commons (CC BY-SA 3.0). http://creativecommons.org/licenses/by-sa/3.0/
-Tags: pablo, cazorla, illustrator, concept artist
+Version: 0.1
+Tags: pablo, cazorla, ilustración, webdesign
 */
 
 /* NORMALIZE */
@@ -89,8 +88,7 @@ article{margin-bottom:30px;min-height: 500px}
 .sprite,
 #searchform #searchsubmit,
 .comment-body:before,
-.item-header-content .close-work.x,
-.rss-link{background-image:url('img/sprite.png');background-repeat: no-repeat;}
+.item-header-content .close-work.x{background-image:url('img/sprite.png');background-repeat: no-repeat;}
 
 /* Buttons */
 .button{
@@ -241,7 +239,7 @@ footer.main{
 
 /* Sidebar : menu-secondary */
 .menu-secondary-container li{padding:1px 0;}
-.menu-secondary-container a,.rss-link{display:block;line-height: 30px;padding:0 10px;background-color:#AAA;color:#FFF;
+.menu-secondary-container a{display:block;line-height: 30px;padding:0 10px;background:#AAA;color:#FFF;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
 	border-radius:3px;
@@ -251,8 +249,7 @@ footer.main{
 	transition: background-color .2s;
 
 }
-.menu-secondary-container a:hover,.rss-link:hover{background-color:#333;text-decoration:none;}
-.rss-link{padding-left:30px;background-position:5px -95px}
+.menu-secondary-container a:hover{background:#333;text-decoration:none;}
 
 /* Sidebar : Tag Cloud */
 .tagcloud a{font-size:14px !important;
@@ -301,8 +298,7 @@ color:#777;
 .post .size-medium,
 .post .size-large,
 .post .attachment-large,
-.post .wp-caption,
-.post img{width:auto !important;max-width:100%;height:auto !important;display:block;}
+.post .wp-caption{width:100% !important;max-width:100%;height:auto !important;display:block;}
 .post .wp-caption{margin-bottom:20px;}
 .post .wp-caption p{margin-bottom:0;font-size: 12px;text-align: center;color:#777;}
 .post table{border-left:solid 1px #CCC;border-bottom:solid 1px #CCC;width:100%;text-align:left;font-size: 16px;margin-bottom:32px;}
@@ -748,3 +744,24 @@ article.about-me {margin-bottom: 80px}
 	.about-me-image {width: 80%;padding:0 10% 20px;float:none;}
 	.about-me-summary {width: 100%;float:none;padding:0;}
 }
+/* wipslider */
+.wipSlider,.wipSlider > div{margin:0;padding:0}
+.wipSlider{margin:10px auto 25px;position:relative}
+.wipSlider > div{display:none}
+.wipSlider > div:first-child{display:block;text-align:center}
+.wipSlider img{width: auto !important;max-width: 100% !important;height:auto !important;border:solid 1px #DDD;display: inline}
+.wipSliderActive{border:solid 1px #DDD}
+.wipSliderActive > div{position:absolute;top:0;left:0;z-index: 10;display:block;}
+.wipSliderActive > div:first-child{position:relative;z-index: 12;text-align:left}
+.wipSliderActive img{width: 100% !important;border:none;display:block}
+.wipSliderActive > .wipCtrl{z-index: 13;top:auto;bottom:15px;left:15px;right:15px;background:#000;background:rgba(0,0,0,.5);height:36px;padding:7px;
+border:solid 1px rgba(255,255,255,.1);opacity: 0;-webkit-transition: opacity .4s;-moz-transition: opacity .4s;transition: opacity .4s}
+.wipSliderActive:hover > .wipCtrl{opacity: 1}
+.wipCtrl,.wipBtn{border-radius:6px;-moz-border-radius:6px;-webkit-border-radius:6px}
+.wipBtn{background:#000;height: 16px;width:40px;padding:10px 5px;text-align:center}
+.wipBtn,.wipRage{cursor: pointer}
+.wipBtn span{position:relative;left:4px;height: 0;width:0;display: block;margin:0 auto;border-width:8px;border-style: solid;border-color:transparent transparent transparent #FFF}
+.wipBtn span:first-child{display: none;}
+.wipBtn.play span{left:0;background:#FFF;height: 16px;width:6px;display: inline-block;margin:0 2px;border:none}
+.wipRage{position:absolute;top:23px;bottom:23px;left:70px;right:12px;background:#333;overflow: hidden}
+.wipRage span{position:absolute;top:0;bottom:0;left:0;width:0;background:#FFF;-webkit-transition: width .3s;-moz-transition: width .3s;transition: width .3s}
